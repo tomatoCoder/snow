@@ -3,24 +3,27 @@
  * @Author: qingyang
  * @Date: 2020-12-31 09:44:43
  * @LastEditors: qingyang
- * @LastEditTime: 2020-12-31 15:19:01
+ * @LastEditTime: 2021-01-06 16:26:48
 -->
 <template>
-  <canvas id="canvas_snow"></canvas>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="three"></div>
+  <!-- <canvas id="canvas_snow"></canvas>
+  <img alt="Vue logo" src="./assets/snow.png" id="logo">
+  <HelloWorld msg="Welcome to Your Vue.js App"/> -->
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
-import {startSnow} from './utils/snow.js'
+import { startSnow } from './utils/snow.js'
+import { createThree } from './utils/three'
 export default {
   name: 'App',
   components: { 
     HelloWorld
   },
   mounted() {
-    startSnow();
+    // startSnow();
+    createThree();
   }
 }
 </script>
@@ -28,7 +31,7 @@ export default {
 <style>
 #app {
   background: skyblue;
-  min-height: 100vh;
+  /* min-height: 100vh; */
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
